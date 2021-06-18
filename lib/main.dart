@@ -12,15 +12,25 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         title: 'Flutter layout demo',
         home: Scaffold(
-        appBar: AppBar(
-        title: Text('Flutter layout demo'),
-    ),
-    body: Center(
-    child: MyHomePage(),
-    ),
-    ),
+          appBar: AppBar(
+            title: Text('Flutter layout demo'),
+          ),
+          body: Center(
+            child: Container(
+              padding: EdgeInsets.all(20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: [
+                      MyHomePage(),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        )
     );
   }
 }
-
-
